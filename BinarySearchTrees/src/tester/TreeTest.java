@@ -4,6 +4,7 @@
 	We are unable to perform tests if methods only print to screen. Particular methods must be modified to return data.
 	We have included more detailed comments below.
 	In particular, we need a way to have the tree returned in the inorder, preorder, and postorder methods (not just printed to screen).
+	We also need a way to access the root node (currently "protected" within the BinaryTree class).
  */
 
 package tester;
@@ -206,7 +207,6 @@ public class TreeTest {
 		avl.insert(5);
 		avl.insert(7);
 		avl.insert(8);
-
 		// base state of tree established (see testing doc)
 
 		avl.remove(5);
@@ -236,8 +236,7 @@ public class TreeTest {
 		avl.insert(5);
 		avl.insert(2);
 		avl.insert(10);
-		avl.insert(1)
-
+		avl.insert(1);
 		// base state of tree established (see testing doc)
 
 		avl.remove(10);
@@ -259,6 +258,7 @@ public class TreeTest {
 
 		assertEquals(0, balanceFactor(avl.root));
 	}
+
 	@Test
 	public void balanceFactorRight() {
 		avl.insert(5);
@@ -270,6 +270,7 @@ public class TreeTest {
 
 		assertEquals(1, balanceFactor(avl.root));
 	}
+
 	@Test
 	public void balanceFactorLeft() {
 		avl.insert(5);
