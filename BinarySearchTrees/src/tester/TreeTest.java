@@ -199,7 +199,7 @@ public class TreeTest {
 
 		avl.insert(8);
 
-		assertEquals("4 5 6 7 8", avl.inOrder())
+		assertEquals("4 5 6 7 8", avl.inOrder());
 	}
 	@Test
 	public void rotateLeftAfterRemove() {
@@ -209,10 +209,15 @@ public class TreeTest {
 
 		// base state of tree established (see testing doc)
 
-		avl.remove(5)
+		avl.remove(5);
 
-		assertEquals("7 8", avl.inOrder())
+		assertEquals("7 8", avl.inOrder());
 	}
+
+	/*
+		AVLTree
+		rotateRight()
+	 */
 
 	@Test
 	public void rotateRightAfterInsert() {
@@ -224,7 +229,7 @@ public class TreeTest {
 
 		avl.insert(4);
 
-		assertEquals("4 5 6 7 8", avl.inOrder())
+		assertEquals("4 5 6 7 8", avl.inOrder());
 	}
 	@Test
 	public void rotateRightAfterRemove() {
@@ -235,10 +240,15 @@ public class TreeTest {
 
 		// base state of tree established (see testing doc)
 
-		avl.remove(10)
+		avl.remove(10);
 
-		assertEquals("1 2 5", avl.inOrder())
+		assertEquals("1 2 5", avl.inOrder());
 	}
+
+	/*
+		AVLTree
+		balanceFactor()
+	 */
 
 	@Test
 	public void balanceFactorBalanced() {
@@ -256,7 +266,7 @@ public class TreeTest {
 		avl.insert(7);
 		//base state of tree established
 
-		avl.insert(9)
+		avl.insert(9);
 
 		assertEquals(1, balanceFactor(avl.root));
 	}
@@ -267,7 +277,7 @@ public class TreeTest {
 		avl.insert(7);
 		//base state of tree established
 
-		avl.insert(1)
+		avl.insert(1);
 
 		assertEquals(-1, balanceFactor(avl.root));
 	}
